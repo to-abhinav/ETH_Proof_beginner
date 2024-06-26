@@ -1,19 +1,46 @@
-# MyToken
+# Abhinav Token Smart Contract
 
-This Solidity contract defines a basic token with mint and burn functions, allowing for the creation and destruction of tokens. The contract also keeps track of the total supply of tokens and the balance of each address.
+This repository contains a basic Solidity smart contract for a token named "Sumit" with the symbol "SK". The contract manages balances for various addresses and supports token minting and burning.
 
-## Description
+## Contract Information
 
-This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. This contract enables the creation of a custom cryptocurrency token, allowing the owner to mint new tokens and increase the total supply, as well as burn existing tokens to reduce the supply. Additionally, it maintains a record of each user's token balance, enabling the tracking of token ownership and transfer.
+- **Token Symbol**: Abby
+- **Token Name**: AbhinavKumar
+- **Total Supply**: Starts at 0
 
-## Getting Started
+## Features
 
-### Executing Program
+- **Minting Tokens**: Increases the total supply and credits tokens to a specified address.
+- **Burning Tokens**: Decreases the total supply and debits tokens from a specified address if it has enough tokens.
+
+## Functions
+
+### Open Variables
+
+- `string public tokenName`: The token's name.
+- `string public tokenSymbol`: The token's symbol.
+- `uint256 public totalSupply`: The token's total supply.
+
+### Mapping
+
+A mapping that maintains the balance for each address: `mapping(address => uint256) public balances`.
+
+### Mint Function
+
+The `mint` function creates and assigns tokens to a specified address. This increases both the recipient address's balance and the total token supply.
+
+### Burn Function
+
+The `burn` function destroys tokens from a given address. Checking if the holder has sufficient tokens to burn, this reduces both the total supply of tokens and the balance of the address.
+
+## Executing Program
 
 To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at [Remix](https://remix.ethereum.org/).
 
-#Author
+## Author
+
 Abhinav Kumar
 
-#License
+## License
+
 This project is licensed under the MIT License.
