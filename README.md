@@ -29,6 +29,12 @@ A mapping that maintains the balance for each address: `mapping(address => uint2
 
 The `mint` function creates and assigns tokens to a specified address. This increases both the recipient address's balance and the total token supply.
 
+```function mint(address _recipient, uint _amount) public {
+        totalSupply += _amount;
+        balances[_recipient] += _amount;
+    }
+```
+
 ### Burn Function
 
 The `burn` function destroys tokens from a given address. Checking if the holder has sufficient tokens to burn, this reduces both the total supply of tokens and the balance of the address.
