@@ -1,6 +1,6 @@
 # Abhinav Token Smart Contract
 
-This repository contains a basic Solidity smart contract for a token named "Sumit" with the symbol "SK". The contract manages balances for various addresses and supports token minting and burning.
+This repository contains a basic Solidity smart contract for a token named "AbhinavKumar" with the symbol "Abby". The contract manages balances for various addresses and supports token minting and burning.
 
 ## Contract Information
 
