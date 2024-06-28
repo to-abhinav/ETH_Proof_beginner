@@ -25,11 +25,16 @@ This repository contains a basic Solidity smart contract for a token named "Abhi
 
 A mapping that maintains the balance for each address: `mapping(address => uint256) public balances`.
 
+```
+ mapping(address => uint) public balances;
+```
+
 ### Mint Function
 
 The `mint` function creates and assigns tokens to a specified address. This increases both the recipient address's balance and the total token supply.
 
-```function mint(address _recipient, uint _amount) public {
+```
+function mint(address _recipient, uint _amount) public {
         totalSupply += _amount;
         balances[_recipient] += _amount;
     }
@@ -38,6 +43,15 @@ The `mint` function creates and assigns tokens to a specified address. This incr
 ### Burn Function
 
 The `burn` function destroys tokens from a given address. Checking if the holder has sufficient tokens to burn, this reduces both the total supply of tokens and the balance of the address.
+
+```
+// Function to burn tokens
+    function burn(address _account, uint _amount) public {
+        require(balances[_account] >= _amount, "Insufficient balance to burn");
+        totalSupply -= _amount;
+        balances[_account] -= _amount;
+    }
+```
 
 ## Executing Program
 
